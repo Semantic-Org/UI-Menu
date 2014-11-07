@@ -1430,11 +1430,7 @@
 
 .ui.menu.fixed {
   position: fixed;
-<<<<<<< HEAD
   z-index: 101;
-=======
-  z-index: 999;
->>>>>>> a6f8040568cc18c3d3044e85d87251dd1ce46a9f
   margin: 0em;
   border: none;
   width: 100%;
@@ -1592,12 +1588,9 @@
          Theme Overrides
 *******************************/
 
-<<<<<<< HEAD
 
 
 /*******************************
          Site Overrides
 *******************************/
 
-=======
->>>>>>> a6f8040568cc18c3d3044e85d87251dd1ce46a9f
