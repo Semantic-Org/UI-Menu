@@ -1,6 +1,10 @@
 {
   "name": "semantic-ui-menu",
+<<<<<<< HEAD
   "version": "1.0.0-beta",
+=======
+  "version": "1.0.0",
+>>>>>>> a6f8040568cc18c3d3044e85d87251dd1ce46a9f
   "title": "Semantic UI - Menu",
   "description": "Single component release of menu",
   "homepage": "http://www.semantic-ui.com",
@@ -13,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
   },
+<<<<<<< HEAD
+=======
+  "dependencies": {
+    "jquery": "x.x.x"
+  },
+>>>>>>> a6f8040568cc18c3d3044e85d87251dd1ce46a9f
   "devDependencies": {}
 }
