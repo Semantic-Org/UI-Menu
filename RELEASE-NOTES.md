@@ -2,6 +2,20 @@
 
 - **Dropdown** - Sub menus inside dropdowns now need a wrapping div **text** around sub-menu descriptions
 
+### Version 0.19.0 - July 3, 2014
+
+- **Accordion** - Fixes incompatibilities with ``ui list`` when used inside a ``ui accordion``, fixes issues with menu accordion display in some circumstances
+- **Menu** - Fixes ``ui inverted secondary pointing menu`` to have correct pointer color for all color variations **Thanks AdamMaras**
+- **Docs** - Language clarified for menu/rating definition **Thanks jnbt/ewiner**
+
+### Version 0.18.0 - June 6, 2014
+
+- **Menu** - Fixes bug where pointing menu would sometimes appear below content **Thanks Skysplit**
+
+### Version 0.15.2 - Mar 28, 2014
+
+- **Menu** - Fixes formatting of attached segments with menus
+
 ### Version 0.13.0 - Feb 20, 2014
 
 - **Menu** - Fixes 2px border on last element in horizontal menus
