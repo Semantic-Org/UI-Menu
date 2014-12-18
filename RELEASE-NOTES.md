@@ -1,3 +1,17 @@
+### Version 1.3.0 - December 17, 2014
+
+- **Dropdown** - Dropdown can now specify which direction a menu should appear left/right, dropdown icons can also appear on the left
+- **Dropdown** - Dropdown now always scrolls to active element on menu open, calculates position with new ``loading`` class
+- **Dropdown** - Fix bug in position of sub menus with ``floating dropdown``
+
+### Version 1.1.0 - December 02, 2014
+
+- **Menu/Segment** Fixes double border on pointing menu with attached segment **Thanks davialexandre**
+
+### Version 1.0.1 - November 28, 2014
+
+- **Menu** - Removes missing image loader variable **Thanks ryan-mahoney**
+
 ### Version 1.0.0 - November 24, 2014
 
 - **Dropdown** - Sub menus inside dropdowns now need a wrapping div **text** around sub-menu descriptions
