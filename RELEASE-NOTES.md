@@ -1,3 +1,8 @@
+### Version 1.4.0 - December 22, 2014
+
+- **Menu** - Fix border radius of dropdown menu inside `ui vertical menu`
+- **Menu** - Fix formatting of ``ui selection dropdown`` inside ``menu``
+
 ### Version 1.3.0 - December 17, 2014
 
 - **Dropdown** - Dropdown can now specify which direction a menu should appear left/right, dropdown icons can also appear on the left
