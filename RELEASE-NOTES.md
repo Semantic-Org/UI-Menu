@@ -1,3 +1,24 @@
+### Version 1.7.0 - January 14, 2015
+
+- **Dropdown** - New `upward dropdown` variation, which opens its menu upward. Default animation now uses ``settings.transition = 'auto'` and determines direction of animation based on menu direction
+- **Dropdown** - Fixed bug where sub menus may sometimes have dropdown icon overlap text
+- **Dropdown** - Fixes dropdown search input from filtering text values when input is inside menu, i.e "In-Menu Search"
+- **Segment** - ``ui tabular menu`` now correctly aligns with attached segment when using fluid variation *Thanks @MohammadYounes*
+- **List** - Fix some styling issues with `ui list` inside `ui menu`
+
+### Version 1.6.2 - January 06, 2015
+
+- **Menu** - Fixes ``fluid text menu`` to have correct margins
+
+### Version 1.6.0 - January 05, 2015
+
+- **Menu** - Fixes ``ui fluid labeled icon menu`` to not have `min-width`
+
+### Version 1.5.0 - December 30, 2014
+
+- **Dropdown** - New setting ``allowCategorySelection`` lets menu items with sub menus be selected. Added example in docs.
+- **Menu** - ``ui fixed menu`` now defaults to ``ui top fixed menu``
+
 ### Version 1.4.0 - December 22, 2014
 
 - **Menu** - Fix border radius of dropdown menu inside `ui vertical menu`
