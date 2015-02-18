@@ -1,0 +1,17 @@
+{
+  "name": "semantic-ui-menu",
+  "version": "1.9.0",
+  "title": "Semantic UI - Menu",
+  "description": "Single component release of menu",
+  "homepage": "http://www.semantic-ui.com",
+  "author": "Jack Lukic <jack@semantic-ui.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Semantic-Org/UI-Menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
+  },
+  "devDependencies": {}
+}
