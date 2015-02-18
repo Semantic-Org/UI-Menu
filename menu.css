@@ -1,7 +1,7 @@
  /*
- * # Semantic UI
+ * # Semantic UI - 1.9.0
  * https://github.com/Semantic-Org/Semantic-UI
- * http://beta.semantic-ui.com/
+ * http://www.semantic-ui.com/
  *
  * Copyright 2014 Contributors
  * Released under the MIT license
@@ -23,7 +23,7 @@
 .ui.menu {
   margin: 1rem 0rem;
   background: #ffffff;
-  font-size: 0px;
+  font-size: 0em;
   font-weight: normal;
   box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15), 0px 1px 2px 0 rgba(0, 0, 0, 0.05);
   border-radius: 0.2857rem;
@@ -40,6 +40,12 @@
 }
 .ui.menu:last-child {
   margin-bottom: 0rem;
+}
+.ui.menu .menu {
+  margin: 0em;
+}
+.ui.menu:not(.vertical) .menu {
+  font-size: 0em;
 }
 
 /*--------------
@@ -68,7 +74,7 @@
 .ui.menu .item {
   position: relative;
   display: inline-block;
-  padding: 0.83em 0.95em;
+  padding: 0.78571em 0.95em;
   border-top: 0em solid transparent;
   background: none;
   vertical-align: middle;
@@ -82,9 +88,6 @@
           user-select: none;
   -webkit-transition: opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
           transition: opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-.ui.menu .menu {
-  margin: 0em;
 }
 
 /* Floated Content */
@@ -188,11 +191,10 @@
   padding-top: 0.4em;
   padding-bottom: 0.4em;
 }
-
-/* Action Input */
-.ui.menu:not(.vertical) .item .action.input > .button {
-  font-size: 0.875em;
-  padding: 0.55em 0.8em;
+.ui.menu .item > .input .button,
+.ui.menu .item > .input .label {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 /* Resizes */
@@ -201,16 +203,20 @@
   padding-top: 0.4em;
   padding-bottom: 0.4em;
 }
+.ui.small.menu .item > .input .button,
+.ui.small.menu .item > .input .label {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
 .ui.large.menu .item > .input input {
   top: -0.125em;
   padding-bottom: 0.6em;
   padding-top: 0.6em;
 }
-.ui.large.menu .item .action.input > .button {
-  padding: 0.9em;
-}
-.ui.large.menu .item .action.input > .button > .icon {
-  padding-top: 0.8em;
+.ui.large.menu .item > .input .button,
+.ui.large.menu .item > .input .label {
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
 }
 
 /*--------------
@@ -231,7 +237,7 @@
 
 
 /* Dropdown */
-.ui.menu .ui.dropdown.visible {
+.ui.menu .ui.dropdown.item.visible {
   background: rgba(0, 0, 0, 0.03);
   border-bottom-right-radius: 0em;
   border-bottom-left-radius: 0em;
@@ -386,26 +392,6 @@
   background-color: transparent !important;
 }
 
-/*--------------------
-       Loading
----------------------*/
-
-
-/* On Form */
-.ui.menu.loading {
-  position: relative;
-}
-.ui.menu.loading:after {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8) url("assets/images/loader-large.gif") no-repeat 50% 50%;
-  visibility: visible;
-}
-
 
 /*******************************
              Types
@@ -479,15 +465,16 @@
   content: "\f0da";
   margin-left: 1em;
 }
+.ui.vertical.menu .active.dropdown.item {
+  border-top-right-radius: 0em;
+  border-bottom-right-radius: 0em;
+}
 .ui.vertical.menu .dropdown.item .menu {
   top: 0% !important;
   left: 100%;
   margin: 0px 0px 0px 0px;
   box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
-}
-.ui.vertical.menu .dropdown.item.active {
-  border-top-right-radius: 0em;
-  border-bottom-right-radius: 0em;
+  border-radius: 0em 0.2857rem 0.2857rem 0.2857rem;
 }
 .ui.vertical.menu .dropdown.item .menu .item {
   font-size: 1rem;
@@ -561,7 +548,7 @@
 
 /* Sub Menu Active */
 .ui.tiered.menu .sub.menu .active.item {
-  padding-top: 0.83em;
+  padding-top: 0.78571em;
   background: none transparent;
   border-radius: 0;
   border-top: medium none;
@@ -608,9 +595,13 @@
 
 .ui.tabular.menu {
   background-color: transparent;
-  border-bottom: 1px solid #d4d4d5;
   border-radius: 0em;
   box-shadow: none !important;
+  border-bottom: 1px solid #d4d4d5;
+}
+.ui.tabular.fluid.menu {
+  width: -webkit-calc(100% +  2px ) !important;
+  width: calc(100% +  2px ) !important;
 }
 .ui.tabular.menu .item {
   background-color: transparent;
@@ -634,12 +625,13 @@
 /* Active */
 .ui.tabular.menu .active.item {
   position: relative;
+  border-bottom: none;
+  vertical-align: bottom;
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.8);
   border-color: #d4d4d5;
   font-weight: bold;
   margin-bottom: -1px;
-  border-bottom: 1px solid #ffffff;
   box-shadow: none;
   border-radius: 5px 5px 0px 0px;
 }
@@ -649,8 +641,10 @@
   position: relative;
   z-index: 2;
 }
-.ui.tabular.menu ~ .bottom.attached.segment {
-  margin: -1px 0px 0px;
+.ui.tabular.menu + .bottom.attached.segment,
+.ui.tabular.menu ~ .bottom.attached.segment + .bottom.attached.segment {
+  border-top: none;
+  margin: 0px;
 }
 
 /*--------------
@@ -676,7 +670,7 @@
 /* Active */
 .ui.pagination.menu .active.item {
   border-top: none;
-  padding-top: 0.83em;
+  padding-top: 0.78571em;
   background-color: rgba(0, 0, 0, 0.03);
   box-shadow: none;
 }
@@ -697,7 +691,7 @@
   height: auto !important;
   background: none;
   margin: 0em 0.25em;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.8em;
   border-radius: 0.2857rem;
 }
 .ui.secondary.menu > .menu > .item:before,
@@ -964,7 +958,7 @@
 }
 .ui.vertical.text.menu .item > i.icon {
   float: none;
-  margin: 0em 0.83em 0em 0em;
+  margin: 0em 0.78571em 0em 0em;
 }
 .ui.vertical.text.menu .header.item {
   margin: 0.8em 0em;
@@ -995,11 +989,19 @@
 .ui.text.attached.menu {
   box-shadow: none;
 }
+
+/* Inverted */
 .ui.inverted.text.menu,
 .ui.inverted.text.menu .item,
 .ui.inverted.text.menu .item:hover,
 .ui.inverted.text.menu .item.active {
   background-color: transparent;
+}
+
+/* Fluid */
+.ui.fluid.text.menu {
+  margin-left: 0em;
+  margin-right: 0em;
 }
 
 /*--------------
@@ -1051,13 +1053,16 @@
 .ui.labeled.icon.menu {
   text-align: center;
 }
+.ui.fluid.labeled.icon.menu > .item {
+  min-width: 0em;
+}
 .ui.labeled.icon.menu > .item {
   min-width: 6em;
 }
 .ui.labeled.icon.menu > .item > .icon {
   display: block;
   font-size: 1.5em !important;
-  margin: 0em auto 0.3em !important;
+  margin: 0em auto 0.5em !important;
 }
 
 
@@ -1330,8 +1335,8 @@
 .ui.horizontally.fitted.menu .item,
 .ui.horizontally.fitted.menu .item .menu .item,
 .ui.menu .horizontally.fitted.item {
-  padding-top: 0.83em;
-  padding-bottom: 0.83em;
+  padding-top: 0.78571em;
+  padding-bottom: 0.78571em;
 }
 .ui.vertically.fitted.menu .item,
 .ui.vertically.fitted.menu .item .menu .item,
@@ -1347,7 +1352,7 @@
 .ui.borderless.menu .item:before,
 .ui.borderless.menu .item .menu .item:before,
 .ui.menu .borderless.item:before {
-  background: none;
+  background: none !important;
 }
 
 /*-------------------
@@ -1386,9 +1391,6 @@
   padding-left: 0px !important;
   padding-right: 0px !important;
   text-align: center;
-}
-.ui.item.menu > .item:last-child {
-  border-radius: 0px 0.2857rem 0.2857rem 0px;
 }
 .ui.menu.two.item .item {
   width: 50%;
@@ -1430,7 +1432,7 @@
 
 .ui.menu.fixed {
   position: fixed;
-  z-index: 999;
+  z-index: 101;
   margin: 0em;
   border: none;
   width: 100%;
@@ -1440,13 +1442,14 @@
 .ui.menu.fixed .item:last-child {
   border-radius: 0px !important;
 }
-.ui.menu.fixed.top {
+.ui.fixed.menu,
+.ui.top.fixed.menu {
   top: 0px;
   left: 0px;
   right: auto;
   bottom: auto;
 }
-.ui.menu.fixed.right {
+.ui.right.fixed.menu {
   top: 0px;
   right: 0px;
   left: auto;
@@ -1454,13 +1457,13 @@
   width: auto;
   height: 100%;
 }
-.ui.menu.fixed.bottom {
+.ui.bottom.fixed.menu {
   bottom: 0px;
   left: 0px;
   top: auto;
   right: auto;
 }
-.ui.menu.fixed.left {
+.ui.left.fixed.menu {
   top: 0px;
   left: 0px;
   right: auto;
@@ -1480,24 +1483,22 @@
 
 .ui.pointing.menu .active.item:after {
   position: absolute;
-  bottom: -0.3em;
-  left: 50%;
   content: '';
-  margin-left: -0.3em;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  margin: 1px 0em 0em 0em;
+  background: none;
   width: 0.6em;
   height: 0.6em;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  background: none;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  border-bottom: 1px solid #d4d4d5;
+  border-right: 1px solid #d4d4d5;
   z-index: 2;
-  -webkit-transition: background 0.2s ease
-  ;
-          transition: background 0.2s ease
-  ;
+  -webkit-transition: background 0.2s ease;
+          transition: background 0.2s ease;
 }
 
 /* Don't double up pointers */
@@ -1507,13 +1508,16 @@
 .ui.vertical.pointing.menu .active.item:after {
   position: absolute;
   top: 50%;
-  margin-top: -0.3em;
-  right: -0.3em;
+  right: 0%;
   bottom: auto;
   left: auto;
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+      -ms-transform: translateX(50%) translateY(-50%) rotate(45deg);
+          transform: translateX(50%) translateY(-50%) rotate(45deg);
+  margin: 0em -1px 0em 0em;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #d4d4d5;
+  border-right: 1px solid #d4d4d5;
 }
 
 /* Colors */
@@ -1521,13 +1525,13 @@
   background-color: #fafafa;
 }
 .ui.pointing.menu .active.item:after {
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
 }
 .ui.vertical.pointing.menu .item:hover:after {
   background-color: #fafafa;
 }
 .ui.vertical.pointing.menu .active.item:after {
-  background-color: #fcfcfc;
+  background-color: #f7f7f7;
 }
 
 /*--------------
@@ -1586,5 +1590,11 @@
 
 /*******************************
          Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
 *******************************/
 
