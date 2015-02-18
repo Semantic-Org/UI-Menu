@@ -1,6 +1,10 @@
 {
   "name": "semantic-ui-menu",
+<<<<<<< HEAD
   "version": "1.0.0-beta",
+=======
+  "version": "1.7.2",
+>>>>>>> d8c6961c70b75ddb9e53e9da243de6228e0a5198
   "title": "Semantic UI - Menu",
   "description": "Single component release of menu",
   "homepage": "http://www.semantic-ui.com",
@@ -8,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Semantic-Org/UI-Menu.git"
+    "url": "https://github.com/Semantic-Org/UI-Menu.git"
   },
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
