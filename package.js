@@ -1,17 +1,14 @@
-var
-  where = 'client' // Adds files only to the client
-;
 
 Package.describe({
   name    : 'semantic:ui-menu',
-  summary : 'Semantic UI - Menu (official): Single component release of menu',
-  version : '1.9.2',
+  summary : 'Semantic UI - Menu: Single component release',
+  version : '1.9.3',
   git     : 'git://github.com/Semantic-Org/UI-Menu.git',
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
   api.addFiles([
-    
-  ], where);
+    'menu.css'
+  ], 'client');
 });
