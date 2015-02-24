@@ -1,3 +1,7 @@
+### Version 1.10.0 - February 23, 2015
+
+- **Menu** - Fixes pointing menu displaying under dropdown menu
+
 ### UI Changes
 
 - **Dropdown** - `search selection dropdown` will now close the menu when a `dropdown icon` is clicked
