@@ -1,3 +1,7 @@
+### Version 1.11.5 - March 23, 2015
+
+- **Dropdown** - Fixes IE10 scrollbar width in menu (calc was being precompiled in LESS) **Thanks @gabormeszoly**
+
 ### Version 1.11.0 - March 3, 2015
 
 - **Menu** - Fix vertical pointing menu, sub menu arrow color
