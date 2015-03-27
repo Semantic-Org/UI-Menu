@@ -1,3 +1,7 @@
+### Version 1.11.6 - March 27, 2015
+
+- **Menu/Dropdown** - Fix dropdown headers disappearing inside menus
+
 ### Version 1.11.5 - March 23, 2015
 
 - **Dropdown** - Fixes IE10 scrollbar width in menu (calc was being precompiled in LESS) **Thanks @gabormeszoly**
