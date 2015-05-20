@@ -1,3 +1,7 @@
+### Version 1.12.2 - May 4, 2015
+
+- **Dropdown** - Fixed `left` and `right` arrow does not move input cursor with `visible selection dropdown`. Event accidentally prevented by `sub menu` shortcut keys.
+
 ### Version 1.11.6 - March 27, 2015
 
 - **Menu/Dropdown** - Fix dropdown headers disappearing inside menus
