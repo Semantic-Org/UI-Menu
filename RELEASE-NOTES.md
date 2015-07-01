@@ -1,3 +1,46 @@
+### Version 2.0.0 - June 30, 2015
+
+- **Menu** - `tiered menu` has been removed in `2.0`. This may be rewritten in the future, but was not up to the standards of the rest of the library and has been removed.
+- **Dropdown** - Dropdowns now automatically observe changes in `menu` and will update selector cache with new additions
+- **Dropdown** - Added new dropdown variation `scrolling dropdown` and `scrolling menu`, this can be used to include a scrollable section inside a dropdown menu.
+- **Dropdown** - Using `page up` and `page down` keys will now scroll menus by a page at a time
+- **Multiple UI** - Many components now use flexbox, which means previous confusing fixes like `font-size: 0;` to remove [white-space from inline block](https://css-tricks.com/fighting-the-space-between-inline-block-elements/) is no longer necessary. Removing this hack, now means any element can be a direct child of `grid` or `menu`.
+- **Menu** - Menu now uses flexbox. This allows menu items to match each others heights regardless of each items content size. `right menu` content should now follow other menu content instead of preceding it (no longer uses float).
+- **Menu** - `vertical tabular menu`, a vertical tab menu, has been added
+- **Dropdown** - Nested `scrolling` menus now support keyboard selection, e.g. pressing "A" for apple, and keyboard scrolling.
+- **Dropdown** - Added `showOnFocus` option that lets you specify whether dropdown menu should show on focus
+- **Dropdown** - Page down and page up now works with dropdown menus
+- **Menu** - Add examples/documentation for `fixed menu`
+- **Menu** - Added `stackable` menu variation for simple responsive menus
+- **Menu** - Added many new variables to menu
+- **Menu** - Fixed several inheritance issues for `dropdown item` inside `menu` appearing as `menu item`.
+- **Menu** - Horizontal menus now set a default image size for images / logos
+- **Menu** - Menus items are now slightly more padded
+- **Menu** - The hover/active state of `dropdown item` have been adjusted to match `item`. Dropdown styles can be themed specifically inside `menu`.
+- **Menu** - Vertical dropdown menus are no longer 100% `min-width`
+- **Button** - Fixed `attached buttons` 1px offset when attached to segment and menu (border vs box shadow border)
+- **Dropdown** - `focus` after changing tabs will no longer cause menu to re-open **Thanks @trevorharwell**
+- **Dropdown** - Fixes issue with headers disappearing inside of `ui dropdown` when nested in `ui menu`
+- **Dropdown** - Fixes `onChange` to fire when input value changes, not just when menu UI changes
+- **Dropdown** - Dropdown `menu` now use same font size as dropdown
+- **Dropdown** - Fixed border radius on `sub menu` when aligned `left`
+- **Dropdown** - Fixed dropdown menu items should not center inside of a center aligned container.
+- **Menu** - Fixed menus like `left fixed` `right fixed` are all now class order dependent.
+- **Menu** - Fixed 1px border on last element of inline menus like `pagination menu` or `compact menu`
+- **Menu** - Fixes divider appears on last element of `(x) item menu`
+- **Menu** - Fixed `top attached menu` not having margin-top, and `bottom attached menu` not having `margin-bottom`
+- **Menu** - Menu now has a `min-height` that matches standard item padding
+- **Menu** - `dropdown menu` in a `secondary pointing menu` or `tabular menu` now receive distinct active styling from other `active item`
+- **Menu** - Fixed arrow position in `pointing menu` to be more consistent, round to exact pixels and account for arrow border width
+- **Menu** - Fix issue with `pointing` arrow having too high a `z-index` and appearing above `ui dropdown menu`
+- **Sidebar** - Last menu item now has a border when sidebar and menu are used together
+- **Menu** - Menu now uses `border` for borders instead of `box-shadow`
+- **Menu** - `secondary pointing menu` has had some slight design tweaks, thinner lines, more padding
+- **Menu** - Active sub-menu items are now `bold`
+- **Menu** - Menus no longer have additional borders on `active item` in the default theme
+- **Menu** - `tiered menu` has been removed
+- **Menu** - Increased contrast on `inverted` menu selection for legibility
+
 ### Version 1.12.2 - May 4, 2015
 
 - **Dropdown** - Fixed `left` and `right` arrow does not move input cursor with `visible selection dropdown`. Event accidentally prevented by `sub menu` shortcut keys.
@@ -12,6 +55,9 @@
 
 ### Version 1.11.0 - March 3, 2015
 
+- **Menu** - Horizontal menus now use flexbox so they can resize automatically to content size.
+- **Menu** - `ui tiered menu` has been deprecated. It has been removed from the docs, and will be removed eventually in `2.0`
+- **Input** - Fix bug with vertical centering of `ui action input` inside `menu` due to `flexbox` changes
 - **Menu** - Fix vertical pointing menu, sub menu arrow color
 
 ### Version 1.10.3 - February 27, 2015
@@ -32,7 +78,7 @@
 - **Dropdown** - Mutation observers will now observe changed in `<select>` values after initialization, and will automatically update dropdown menu when changed
 - **Dropdown** - Dropdown no longer will not show menu when no `item` are present in menu. Dropdown will now only filter results for `ui search dropdown` #1632 **Thanks PSyton**.
 - **Dropdown** - Fixed bug where link items would not open in sub-menus due to `event.preventDefault`
-- **Label** - Fixed `ui corner label` appearing on-top of `ui dropdown` menu due to issue in z-index heirarchy
+- **Label** - Fixed `ui corner label` appearing on-top of `ui dropdown` menu due to issue in z-index hierarchy
 - **List** - `relaxed list` and `very relaxed list` no longer add padding to child menu items
 
 ### Version 1.7.0 - January 14, 2015
