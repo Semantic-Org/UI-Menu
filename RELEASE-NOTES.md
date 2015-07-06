@@ -1,3 +1,10 @@
+### Version 2.0.1 - June 30, 2015
+
+- **Menu** - Fixed `pointing menu` arrow color slightly off
+- **Menu** - Inverted menu no longer includes a 1px transparent border.
+- **Menu** - Fixes `compact vertical menu` using `flex` style incorrectly
+- **Menu** - Fixes `border-top` not appearing on `bottom fixed` menu
+
 ### Version 2.0.0 - June 30, 2015
 
 - **Menu** - `tiered menu` has been removed in `2.0`. This may be rewritten in the future, but was not up to the standards of the rest of the library and has been removed.
