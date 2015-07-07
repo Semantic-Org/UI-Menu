@@ -1,5 +1,11 @@
-### Version 2.0.1 - June 30, 2015
+### Version 2.0.2 - July 7, 2015
 
+- **Dropdown** - Dropdown icon will now always toggle menu visibility [#2510](https://github.com/Semantic-Org/Semantic-UI/issues/2510)
+- **Dropdown** - Clicking on label, or deleting a label will no longer trigger dropdown menu toggling
+
+### Version 2.0.1 - July 6, 2015
+
+- **Dropdown** - Dropdown will now show correctly when menu only includes a message with no other items
 - **Menu** - Fixed `pointing menu` arrow color slightly off
 - **Menu** - Inverted menu no longer includes a 1px transparent border.
 - **Menu** - Fixes `compact vertical menu` using `flex` style incorrectly
