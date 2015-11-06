@@ -2,7 +2,7 @@
 Package.describe({
   name    : 'semantic:ui-menu',
   summary : 'Semantic UI - Menu: Single component release',
-  version : '2.1.4',
+  version : '2.1.6',
   git     : 'git://github.com/Semantic-Org/UI-Menu.git',
 });
 
