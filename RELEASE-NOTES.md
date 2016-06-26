@@ -1,3 +1,15 @@
+### Version 2.2.0 - June 26, 2016
+
+- **Dropdown** - All dropdowns, not just `selection dropdown`, will now select the first `menu item` that starts with a pressed keyboard key, for example "N" will select "New"
+- **Dropdown** - Dropdown will now automatically focus on `search` inside of a dropdown menu after it is opened.
+- **Dropdown** - Added new setting for search selection `hideAdditions` this will remove showing user additions inside the menu, making for a more intuitive adding process. Dropdowns now have a new state `empty` which will format an active dropdown with empty results. [#3791](https://github.com/Semantic-Org/Semantic-UI/issues/3791)
+- **Search** - Fixed an issue where `onResult` returning `false` would not prevent the search menu from hiding. Clicking on an empty results message will also no longer close the search results. [#3856](https://github.com/Semantic-Org/Semantic-UI/issues/3856) [#3870](https://github.com/Semantic-Org/Semantic-UI/issues/3870)
+- **Dropdown** - Dropdowns with sub-menus would not properly activate on mobile [#3183](https://github.com/Semantic-Org/Semantic-UI/issues/3183)
+- **Menu** -  `stackable` menu with `left/right` `menu` or `item` would incorrectly be floated when stacked. [#3604](https://github.com/Semantic-Org/Semantic-UI/issues/3604)
+- **Menu** - `tabular menu` now has correct bottom margin [#4167](https://github.com/Semantic-Org/Semantic-UI/issues/4167)
+- **Menu** - `@dividerSize` was not being used in `vertical menu` [#3781](https://github.com/Semantic-Org/Semantic-UI/issues/3781)
+- **Menu** - `vertical text menu` no longer includes `left` or `right` padding, but will now sit flush with content.
+
 ### Version 2.1.7 - Dec 19, 2015
 
 - **Menu** - Fixed `1px` offset when `attached segment` follows `tabular menu` (max of 2 consecutive segments) [#3479](https://github.com/Semantic-Org/Semantic-UI/issues/3479)
