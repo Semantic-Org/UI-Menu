@@ -1,3 +1,9 @@
+### Version 2.2.3 - August 21, 2016
+
+- **Menu** - Fixed issue where `dropdown` in `vertical menu` would not correctly open `upward` when no space below **Thanks @gdaunton** [#4150 [#4156](https://github.com/Semantic-Org/Semantic-UI/issues/4156)
+- **Popup/Menu** - Fixed issue where popup would not appear correctly when nested in menu in some ways.
+- **Popup** - Fixed popup in menu example
+
 ### Version 2.2.0 - June 26, 2016
 
 - **Dropdown** - All dropdowns, not just `selection dropdown`, will now select the first `menu item` that starts with a pressed keyboard key, for example "N" will select "New"
