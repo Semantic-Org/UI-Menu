@@ -1,3 +1,9 @@
+### Version 2.2.11 - July 11, 2017
+
+- **Dropdown** - Improved spacing on `image` inside `menu item` and for selected `text`
+- **Menu** - Fixed issue where `left menu` and `right menu` did not display correctly in `stackable menu` on mobile **Thanks @BleuDiamant @Traverse** [#3604](https://github.com/Semantic-Org/Semantic-UI/issues/3604) [#5116](https://github.com/Semantic-Org/Semantic-UI/issues/5116)
+- **Menu** - Fixed issue where `(x) item attached menu` was off by 1 pixel due to a css inheritance issue [#4248](https://github.com/Semantic-Org/Semantic-UI/issues/4248)
+
 ### Version 2.2.10 - March 28, 2017
 
 - **Dropdown** - Fix search input inside dropdown menu causing dropdown to close before selection when selecting an item #5113
