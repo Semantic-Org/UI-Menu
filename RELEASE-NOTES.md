@@ -1,3 +1,8 @@
+### Version 2.2.14 - Jan 29, 2018
+
+- **Dropdown** - Fixed issue where using `ui input` in a dropdown menu could cause the input to be too wide in some cases **Thanks @banandrew** [#5085](https://github.com/Semantic-Org/Semantic-UI/issues/5085)
+- **Menu / Popup** - Fixed issue where `inverted menu` rules would cause popup inside a menu to have incorrect link styling in `link list` **Thanks @banandrew** [#5585](https://github.com/Semantic-Org/Semantic-UI/issues/5585) [#5603](https://github.com/Semantic-Org/Semantic-UI/issues/5603)
+
 ### Version 2.2.12 - Aug 07, 2017
 
 - **Dropdown** - Fixed regression that caused sub menu `dropdown` inside `ui menu` to always appear on left edge of dropdown introduced `2.2.11` [#5542](https://github.com/Semantic-Org/Semantic-UI/issues/5542)
