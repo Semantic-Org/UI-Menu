@@ -1,4 +1,4 @@
-### Version 2.3.1 - Mar 19, 2018
+### Version 2.3.1 - Mar 18, 2018
 
 - **Menu** - Fixes `disabled item` showing hover style for `secondary menu` **Thanks @tcmal** [#6268](https://github.com/Semantic-Org/Semantic-UI/issues/6268)
 
